@@ -1,0 +1,253 @@
+.catalog {
+  .mobile-width;
+}
+
+.catalog__title {
+  margin: 0 -30px 24px -30px;
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
+  width: 260px;
+  padding: 76px 30px 76px 30px;
+  background-color: #f1f1f1;
+}
+
+.catalog__list {
+  .list-none;
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-item {
+  border: 1px solid #ececec;
+  margin-bottom: 32px;
+  width: 260px;
+}
+
+.catalog-item__image {
+  width: 260px;
+  height: 195px;
+  margin-bottom: 18px;
+}
+
+.catalog-item__link {
+  display: block;
+  text-decoration: none;
+}
+
+.catalog-item__title {
+  font-size: 17px;
+  line-height: 24px;
+  color: #000000;
+  margin: 0 0 8px 28px;
+  font-weight: 700;
+  width: 205px;
+}
+
+.catalog-item__title--process {
+  font-size: 17px;
+  line-height: 24px;
+  margin: 20px 0 26px 90px;
+  width: 170px;
+}
+
+.catalog-item__features {
+  margin-left: 28px;
+  font-size: 13px;
+  line-height: 30px;
+  width: 204px;
+}
+
+.catalog-item__features--process {
+  font-size: 13px;
+  line-height: 24px;
+  width: 200px;
+  margin: 24px 34px;
+}
+
+.catalog-item__price {
+  position: relative;
+  margin: 40px 0 27px 28px;
+  width: 205px;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.catalog-item__price::before {
+  position: absolute;
+  content: "";
+  top: -25px;
+  left: 0;
+  height: 1px;
+  width: 205px;
+  background-color: #ececec;
+}
+
+.button--catalog {
+  width: 140px;
+  margin: 20px auto 32px auto;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog {
+    .tablet-width;
+  }
+
+  .catalog__title {
+    margin: 0 -50px 80px -50px;
+    font-size: 43px;
+    line-height: 50px;
+    width: 668px;
+    padding: 94px 50px 78px 50px;
+    background-color: #f1f1f1;
+  }
+
+  .catalog-item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 335px;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .catalog-item__image {
+    width: 335px;
+    height: 335px;
+    margin: 0;
+  }
+
+  .catalog-item__title {
+    font-size: 20px;
+    line-height: 24px;
+    padding-right: 70px;
+    margin: 26px 0 0 20px;;
+    width: 230px;
+  }
+
+  .catalog-item__features {
+    width: 300px;
+    font-size: 15px;
+    line-height: 30px;
+    margin: 6px 0 0 20px;
+  }
+
+  .catalog-item__price {
+    font-size: 17px;
+    line-height: 24px;
+    margin: auto 0 30px 24px;
+  }
+
+  .catalog-item--process {
+    height: 745px;
+    margin-bottom: 60px;
+  }
+
+  .catalog-item__title--process {
+    margin: 38px 0 0 104px;
+    width: 300px;
+  }
+
+  .catalog-item__video {
+    order: -1;
+  }
+
+  .catalog-item__video-img {
+    width: 668px;
+    height: 458px;
+  }
+
+  .catalog-item__features--process {
+    font-size: 15px;
+    line-height: 30px;
+    padding: 0 36px 0 40px;
+    width: 592px;
+    margin: 32px 0 16px 0;
+  }
+
+  .catalog-item__price::before {
+    width: 270px;
+  }
+
+  .button--catalog {
+    width: 534px;
+    margin: 20px auto 32px auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog {
+    .desktop-width;
+  }
+
+ .catalog__title {
+    margin: 0 -50px 130px -50px;
+    font-size: 53px;
+    line-height: 57px;
+    width: 1050px;
+    padding: 90px 50px 104px 50px;
+  }
+
+  .catalog__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -50px;
+  }
+
+  .catalog-item {
+    display: flex;
+    flex-direction: column;
+    width: 316px;
+    height: 658px;
+    margin: 0 0 48px 48px;
+  }
+
+  .catalog-item__image {
+    width: 316px;
+    height: 462px;
+    margin: 0;
+  }
+
+  .catalog-item__title {
+    padding-right: 70px;
+    margin: 20px 0 0 20px;;
+    width: 230px;
+  }
+
+  .catalog-item__price {
+    margin: auto 0 30px 24px;
+  }
+
+  .catalog-item--process {
+    height: 458px;
+    margin: 0 0 105px 0;
+    width: 100%;
+  }
+
+  .catalog-item__title--process {
+    margin: 104px 0 0 76px;
+    width: 157px;
+    padding: 0 135px 0 0;
+  }
+
+  .catalog-item__video {
+    order: -1;
+  }
+
+  .catalog-item__video-img {
+    width: 682px;
+    height: 458px;
+  }
+
+  .catalog-item__features--process {
+    width: 242px;
+    padding: 0 50px 0 0;
+    margin: 32px 0 16px 76px;
+  }
+
+  .button--catalog {
+    width: 178px;
+    margin: 30px auto 32px 78px;
+  }
+}

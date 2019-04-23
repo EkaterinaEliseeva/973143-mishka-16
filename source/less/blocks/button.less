@@ -1,0 +1,51 @@
+.button {
+  display: block;
+  color: #000000;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  padding: 14px 25px 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 205px;
+  border: 2px solid #000000;
+}
+
+@media (min-width: @tablet-width) {
+.button--special-offer {
+  width: 236px;
+  margin: 0;
+}
+
+.button--reviews {
+  order: -1;
+  align-self: center;
+  width: 122px;
+}
+
+.button--contacts {
+  width: 178px;
+  margin: 0 auto;
+}
+}
+
+@media (min-width: @desktop-width) {
+  .button--special-offer {
+
+    width: 236px;
+    margin: 0;
+  }
+
+  .button--reviews {
+    order: -1;
+    align-self: center;
+    width: 122px;
+    margin-right: 0;
+  }
+
+  .button--contacts {
+    width: 178px;
+    margin: 0;
+  }
+}
