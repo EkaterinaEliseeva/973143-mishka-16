@@ -44,7 +44,7 @@
 
 .main-nav__item--search:active .main-nav__item--search-icon,
 .main-nav__item--cart:active .main-nav__item--cart-icon {
- opacity: 0.3;
+  opacity: 0.3;
 }
 
 .main-nav__item--cart-icon {
@@ -72,7 +72,7 @@
     .page-header__toggle::before {
       width: 21px;
       height: 20px;
-      background-image: url("/img/icon-menu-close.svg");
+      background-image: url("../img/icon-menu-close.svg");
     }
   }
 
@@ -80,6 +80,7 @@
     .main-nav__list {
       display: block;
     }
+
     .page-header__toggle::before {
       background-image: none;
     }
@@ -89,9 +90,6 @@
 @media (min-width: @tablet-width) {
   .main-nav {
     .tablet-width;
-  }
-
-  .main-nav {
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -165,8 +163,8 @@
     top: 88px;
     left: 217px;
   }
-
 }
+
 @media (min-width: @desktop-width) {
   .main-nav {
     .desktop-width;
@@ -193,5 +191,4 @@
     top: 0;
     left: 235px;
   }
-
 }
