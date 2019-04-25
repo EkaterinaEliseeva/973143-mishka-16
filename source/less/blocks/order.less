@@ -1,0 +1,373 @@
+.order-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.order__title {
+  margin: 0;
+  font-size: 27px;
+  line-height: 30px;
+  padding: 72px 30px;
+  width: 260px;
+  background-color: #f1f1f1;
+  margin-left: -30px;
+}
+
+.order__description {
+  padding: 11px 0;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.order-form__item {
+  width: 260px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.order-form__title {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #63d1bb;
+  margin-bottom: 14px;
+}
+
+.order-form__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.order-form__item--fio {
+  margin-bottom: 34px;
+}
+
+.order-form__item--phone {
+  margin-bottom: 26px;
+}
+
+.order-form__item--email {
+  margin-bottom: 26px;
+}
+
+.order-form__radio {
+  margin: 11px 0;
+  width: 40px;
+  height: 40px;
+}
+
+.order-form__label {
+  width: 198px;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.order-form__checkbox {
+  margin: 10.5px 0;
+  width: 40px;
+  height: 40px;
+}
+
+.order-form__input-text {
+  padding: 0;
+  height: 50px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #000000;
+}
+
+.order-form__input-text--wishes {
+  margin: 5px 0 0 0;
+  height: 140px;
+  width: 100%;
+  border: 2px solid #000000;
+}
+
+.order-form__remark {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.button-form {
+  margin: 28px 0 56px 0;
+}
+
+@media (min-width: @tablet-width) {
+  .order__title {
+    font-size: 43px;
+    line-height: 50px;
+    width: 628px;
+    text-align: center;
+    padding: 90px 70px 82px 70px;
+    margin: 0 0 64px -50px;
+  }
+
+  .order__description {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .order-form__item {
+    padding: 30px 50px 30px 50px;
+    margin: 0 0 0 -50px;
+    width: 668px;
+  }
+
+  .order-form__item--color {
+    padding: 50px 50px 26px 50px;
+    background-color: #f1f1f1;
+  }
+
+  .order-form__title {
+    width: 162px;
+    margin-top: 16px;
+  }
+
+  .order-form__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 501px;
+  }
+
+  .order-form__radio {
+    width: 50px;
+    height: 50px;
+    margin: 0 0 24px 0;
+  }
+
+  .order-form__label {
+    font-size: 19px;
+    line-height: 18px;
+    margin: 0;
+  }
+
+  .order-form__label--radio {
+    margin-top: 14px;
+    width: 422px;
+  }
+
+  .order-form__checkbox {
+    margin: 0 0 20px 0;
+    width: 54px;
+    height: 54px;
+  }
+
+  .order-form__label--checkbox {
+    margin: 14px 0 0 0;
+    width: 162px;
+    padding-left: 14px;
+  }
+
+  .order-form__item--fio {
+    padding: 55px 50px;
+  }
+
+  .order-form__item--fio .order-form__label {
+    width: auto;
+    margin-top: 15px;
+  }
+
+  .order-form__item--fio .order-form__input-text {
+    width: 356px;
+    margin-bottom: 25px;
+  }
+
+  .order-form__item--fio .order-form__input-text--name {
+    width: 410px;
+  }
+
+  .order-form__item--phone {
+    margin: -34px 0 0 -50px;
+    padding: 52px 50px 0 50px;
+    background-color: #f1f1f1;
+  }
+
+  .order-form__input-text {
+    font-size: 19px;
+    line-height: 18px;
+    padding-left: 20px;
+  }
+
+  .order-form__item--phone .order-form__input-text,
+  .order-form__item--email .order-form__input-text {
+    width: 481px;
+  }
+
+  .order-form__item--email {
+    padding: 24px 50px 50px 50px;
+    background-color: #f1f1f1;
+  }
+
+  .order-form__item--wishes {
+    padding-top: 50px;
+  }
+
+  .order-form__input-text--wishes {
+    margin: 0;
+    font-size: 19px;
+    line-height: 18px;
+    width: 490px;
+    padding: 10px 0 0 10px;
+    height: 127px;
+  }
+
+  .order-form__remark {
+    font-size: 17px;
+    line-height: 30px;
+    order: 1;
+    width: 352px;
+    align-self: flex-end;
+    margin: -92px 0 62px 0;
+  }
+
+  .button-form {
+    margin: 22px 0 50px 0;
+    width: 176px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order__title {
+    font-size: 53px;
+    line-height: 57px;
+    text-align: center;
+    padding: 90px 100px 102px 100px;
+    width: 950px;
+  }
+
+  .order__description {
+    width: 700px;
+    padding: 60px 175px 0 175px;
+  }
+
+  .order-form__item {
+    padding: 28px 50px 32px 50px;
+    width: 1050px;
+  }
+
+  .order-form__title {
+    margin: 30px 0 0 0;
+    width: 114px;
+    padding-left: 61px;
+  }
+
+  .order-form__list {
+    margin: 0;
+    width: 875px;
+  }
+
+  .order-form__item--fio {
+    padding: 50px 50px 56px 50px;
+  }
+
+  .order-form__item--fio .order-form__list {
+    width: 700px;
+    margin-right: 175px;
+  }
+
+  .order-form__item--fio .order-form__title {
+    margin-top: 20px;
+  }
+
+  .order-form__item--phone {
+    padding: 50px 50px 24px 50px;
+  }
+
+  .order-form__item--email {
+    padding: 0 50px 52px 50px;
+  }
+
+  .order-form__radio {
+    width: 50px;
+    height: 50px;
+    margin: 14px 0 14px 0;
+  }
+
+  .order-form__label {
+    margin: 28px 0 0 0;
+  }
+
+  .order-form__label--radio {
+    width: 765px;
+    padding: 0 30px 0 30px;
+  }
+
+  .order-form__item--color {
+    justify-content: flex-start;
+    background-color: #f1f1f1;
+    padding: 36px 50px 38px 50px;
+  }
+
+  .order-form__label--checkbox {
+    width: 165px;
+    padding: 0 20px 0 25px;
+    margin: 30px 0 0 0;
+  }
+
+  .order-form__label--checkbox:nth-of-type(3n) {
+    margin-right: 80px;
+  }
+
+  .order-form__checkbox {
+    margin: 14px 0 10px 0;
+  }
+
+  .order-form__item--phone .order-form__input-text,
+  .order-form__item--email .order-form__input-text {
+    width: 660px;
+    padding: 0 20px 0 20px;
+    margin-right: 175px;
+  }
+
+  .order-form__item--phone .order-form__title,
+  .order-form__item--email .order-form__title,
+  .order-form__item--wishes .order-form__title {
+    margin-top: 20px;
+  }
+
+  .order-form__item--fio .order-form__input-text {
+    width: 535px;
+    padding: 0 20px 0 20px;
+    margin-bottom: 25px;
+  }
+
+  .order-form__item--fio .order-form__input-text--name {
+    width: 585px;
+    padding: 0 20px 0 20px;
+  }
+
+  .order-form__item--wishes {
+    padding: 48px 50px 50px 50px;
+  }
+
+  .order-form__input-text--wishes {
+    font-size: 21px;
+    line-height: 21px;
+    width: 666px;
+    height: 110px;
+    padding: 15px;
+    margin-right: 175px;
+  }
+
+  .order-form__remark {
+    margin: -118px 175px 62px 0;
+  }
+
+  .button-form {
+    margin: 0 0 72px 175px;
+  }
+}
