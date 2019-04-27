@@ -1,5 +1,19 @@
 .special-offer {
   .mobile-width;
+  position: relative;
+}
+
+.special-offer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 320px;
+  height: 7px;
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  transform: rotate(180deg);
+  background-size: 320px 100%;
 }
 
 .special-offer__flex {
@@ -22,7 +36,7 @@
 }
 
 .special-offer__text {
-  margin: 24px 0 16px 0;
+  margin: 22px 0 18px 0;
   font-size: 15px;
   line-height: 24px;
   font-weight: 400;
@@ -32,17 +46,24 @@
   font-size: 15px;
   line-height: 20px;
   font-weight: 400;
-  margin: 0 0 24px 0;
+  margin: 0 0 25px 0;
   padding: 0;
 }
 
-.special-offer__item {
-  border-bottom: 1px solid #ececec;
+.special-offer__feature {
+  position: relative;
+  padding: 10px 0 9px 0;
+  width: 95px;
 }
 
-.special-offer__feature {
-  padding: 10px 0;
-  width: 95px;
+.special-offer__feature::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 260px;
+  height: 1px;
+  background-color: #ececec;
 }
 
 .special-offer__image {
@@ -60,6 +81,14 @@
 @media (min-width: @tablet-width) {
   .special-offer {
     .tablet-width;
+  }
+
+  .special-offer::after {
+    bottom: -5px;
+    height: 17px;
+    width: 768px;
+    transform: rotate(180deg);
+    background-size: 768px 100%;
   }
 
   .special-offer__flex {
@@ -96,13 +125,13 @@
 
   .special-offer__features {
     width: 334px;
-    margin: 0 0 54px 0;
+    margin: 0 0 56px 0;
   }
 
   .special-offer__price {
     width: 334px;
     text-align: center;
-    margin: 0 0 32px -22px;
+    margin: 0 0 34px -22px;
     font-size: 20px;
     line-height: 24px;
   }
@@ -111,6 +140,14 @@
 @media (min-width: @desktop-width) {
   .special-offer {
     .desktop-width;
+  }
+
+  .special-offer::after {
+    bottom: -10px;
+    left: 50px;
+    height: 23px;
+    background-size: 1050px 100%;
+    width: 1050px;
   }
 
   .special-offer__flex {
@@ -135,6 +172,10 @@
     width: 300px;
     padding: 0 50px 0 0;
     margin: 40px 16px 46px 0;
+  }
+
+  .special-offer__feature {
+    padding: 10px 0 10px 0;
   }
 
   .special-offer__image {

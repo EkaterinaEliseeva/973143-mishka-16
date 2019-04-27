@@ -15,6 +15,14 @@
 .page-header__logo {
   margin: 22px auto;
   padding-left: 20px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-header__logo-img {
@@ -28,6 +36,7 @@
   border: none;
   background-color: transparent;
   position: relative;
+  cursor: pointer;
 }
 
 .page-header__toggle::before {
@@ -65,6 +74,7 @@
   .page-header__delivery {
     display: block;
     position: absolute;
+    z-index: 1;
     top: 88px;
     right: 50px;
     font-size: 15px;
@@ -76,7 +86,7 @@
 
 @media (min-width: @desktop-width) {
   .page-header__logo {
-    padding: 9px 0 8px 20px;
+    padding: 9px 0 8px 0;
     margin: 0 auto;
   }
 
@@ -88,6 +98,7 @@
   .page-header__new {
     display: block;
     position: absolute;
+    z-index: 1;
     top: 88px;
     left: 50px;
     font-size: 15px;
@@ -99,11 +110,23 @@
   .page-header__sale {
     display: block;
     position: absolute;
+    z-index: 1;
     top: 88px;
     left: 270px;
     font-size: 15px;
     font-weight: 700;
     margin: 0;
     padding: 20px 0;
+  }
+
+  .page-header__new,
+  .page-header__sale {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

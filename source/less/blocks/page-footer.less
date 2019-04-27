@@ -18,14 +18,22 @@
   width: 126px;
   margin: 0 auto;
   padding-right: 42px;
-  text-align: center;
   display: block;
   text-decoration: none;
+  text-align: center;
   color: #000000;
   font-size: 19px;
   line-height: 18px;
   font-weight: 700;
   position: relative;
+
+  &:hover::after {
+    background-image: url("../img/logo-htmlacademy--hover.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-footer__copyright::after {
@@ -49,16 +57,24 @@
 
   .page-footer__logo {
     display: block;
-    margin-right: 66px;
+    margin-right: 74px;
+
+    &:hover .page-footer__logo-fill {
+      fill: #46c1ae;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .page-footer__copyright {
     margin: 0;
-    padding: 12px 42px 12px 0;
+    padding: 12px 58px 12px 0;
   }
 
   .page-footer__copyright::after {
-    top: 5px;
+    top: 7px;
     right: 0;
   }
 }
@@ -74,6 +90,6 @@
 
   .page-footer__copyright {
     width: 126px;
-    padding: 12px 42px 12px 0;
+    padding: 12px 60px 12px 0;
   }
 }
