@@ -1,29 +1,28 @@
 .reviews {
-  .mobile-width;
   font-size: 15px;
   line-height: 30px;
   font-weight: 400;
   margin-bottom: 66px;
-  position: relative;
-}
-
-.reviews::after {
-  content: "";
-  position: absolute;
-  bottom: -50px;
-  left: 0;
-  width: 320px;
-  height: 7px;
-  background-image: url("../img/bg-zigzag-line.svg");
-  background-repeat: repeat-x;
-  transform: rotate(180deg);
-  background-size: 320px 100%;
 }
 
 .reviews__flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  position: relative;
+}
+
+.reviews__flex::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: -30px;
+  width: 320px;
+  height: 7px;
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  transform: rotate(180deg);
+  background-size: 320px 100%;
 }
 
 .reviews__title {
@@ -105,17 +104,8 @@
 
 @media (min-width: @tablet-width) {
   .reviews {
-    .tablet-width;
     font-size: 17px;
     margin-bottom: 82px;
-  }
-
-  .reviews::after {
-    transform: rotate(180deg);
-    background-size: 768px 100%;
-    height: 17px;
-    width: 768px;
-    bottom: -85px;
   }
 
   .reviews__flex {
@@ -125,6 +115,15 @@
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     padding: 54px 50px 20px 50px;
+  }
+
+  .reviews__flex::after {
+    transform: rotate(180deg);
+    background-size: 768px 100%;
+    height: 17px;
+    width: 768px;
+    bottom: -85px;
+    left: 0;
   }
 
   .reviews__title {
@@ -162,23 +161,21 @@
 
 @media (min-width: @desktop-width) {
   .reviews {
-    .desktop-width;
     font-size: 17px;
     margin-bottom: 65px;
-  }
-
-  .reviews::after {
-    background-size: 1050px 100%;
-    width: 1050px;
-    bottom: -90px;
-    left: 50px;
-    height: 23px;
   }
 
   .reviews__flex {
     width: 875px;
     padding: 52px 0 66px 175px;
     margin: 0 auto;
+  }
+
+  .reviews__flex::after {
+    background-size: 1050px 100%;
+    width: 1050px;
+    bottom: -90px;
+    height: 23px;
   }
 
   .reviews__title {

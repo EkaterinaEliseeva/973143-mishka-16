@@ -1,12 +1,10 @@
 .contacts {
-  min-width: 320px;
-  margin: 0 auto;
   font-size: 15px;
   line-height: 30px;
   margin-bottom: 39px;
 }
 
-.contacts-flex {
+.contacts__flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -57,13 +55,15 @@
 
 @media (min-width: @tablet-width) {
   .contacts {
-    .tablet-width;
     font-size: 17px;
     margin-bottom: 54px;
+  }
+
+  .contacts__flex {
     position: relative;
   }
 
-  .contacts::after {
+  .contacts__flex::after {
     content: "";
     position: absolute;
     top: 48px;
@@ -109,18 +109,17 @@
 
 @media (min-width: @desktop-width) {
   .contacts {
-    .desktop-width;
     margin-bottom: 50px;
   }
 
-  .contacts::after {
-    top: 158px;
-    left: 113px;
-  }
-
-  .contacts-flex {
+  .contacts__flex {
     width: 875px;
     padding: 146px 50px 0 225px;
+  }
+
+  .contacts__flex::after {
+    top: 158px;
+    left: 113px;
   }
 
   .contacts__title {
