@@ -1,12 +1,10 @@
 .contacts {
-  min-width: 320px;
-  margin: 0 auto;
   font-size: 15px;
   line-height: 30px;
   margin-bottom: 39px;
 }
 
-.contacts-flex {
+.contacts__flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -16,7 +14,7 @@
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
 }
 
 .contacts__list {
@@ -33,6 +31,17 @@
 .contacts__value--email {
   text-decoration: none;
   color: #000000;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #62d1ba;
+
+  &:hover {
+    color: #46c1ae;
+    border-color: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .contacts__value--address {
@@ -41,15 +50,30 @@
 }
 
 .contacts__map {
-  margin: 0 -30px 38px -30px;
+  margin: 0 -30px 34px -30px;
 }
 
 @media (min-width: @tablet-width) {
   .contacts {
-    .tablet-width;
     font-size: 17px;
-    margin-bottom: 56px;
+    margin-bottom: 54px;
   }
+
+  .contacts__flex {
+    position: relative;
+  }
+
+  .contacts__flex::after {
+    content: "";
+    position: absolute;
+    top: 48px;
+    right: 52px;
+    width: 47px;
+    height: 81px;
+    background-image: url("../img/icon-flag.svg");
+    background-repeat: no-repeat;
+  }
+
 
   .contacts__title {
     font-size: 43px;
@@ -71,21 +95,31 @@
     flex-basis: 256px;
   }
 
+  .contacts__value--email {
+    flex-basis: 206px;
+    margin-right: 50px;
+    margin-bottom: 60px;
+  }
+
   .contacts__map {
     width: 768px;
-    margin: 0 -50px 55px -50px;
+    margin: 0 -50px 54px -50px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .contacts {
-    .desktop-width;
-    margin-bottom: 48px;
+    margin-bottom: 50px;
   }
 
-  .contacts-flex {
+  .contacts__flex {
     width: 875px;
     padding: 146px 50px 0 225px;
+  }
+
+  .contacts__flex::after {
+    top: 158px;
+    left: 113px;
   }
 
   .contacts__title {
@@ -98,13 +132,19 @@
 
   .contacts__list {
     width: 350px;
-    margin: 0 525px 82px 0;
+    margin: 0 525px 78px 0;
+  }
+
+  .contacts__value--email {
+    flex-basis: 206px;
+    margin-right: 50px;
+    margin-bottom: 30px;
   }
 
   .contacts__map {
     order: 1;
     width: 525px;
     height: 457px;
-    margin: -457px 0 55px 348px;
+    margin: -458px 0 55px 348px;
   }
 }

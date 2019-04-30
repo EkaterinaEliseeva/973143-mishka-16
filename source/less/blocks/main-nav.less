@@ -18,6 +18,14 @@
   color: #000000;
   text-decoration: none;
   border-bottom: 2px solid #ececec;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-nav__item--search,
@@ -40,11 +48,6 @@
 .main-nav__item--search:hover .path-fill,
 .main-nav__item--cart:hover .path-fill {
   fill: #63d1bb;
-}
-
-.main-nav__item--search:active .main-nav__item--search-icon,
-.main-nav__item--cart:active .main-nav__item--cart-icon {
-  opacity: 0.3;
 }
 
 .main-nav__item--cart-icon {
@@ -146,6 +149,7 @@
     .main-nav__link {
       padding: 20px 0;
     }
+    z-index: 1;
     font-size: 15px;
     background-color: transparent;
     position: absolute;
@@ -157,6 +161,7 @@
     .main-nav__link {
       padding: 20px 0;
     }
+    z-index: 1;
     font-size: 15px;
     background-color: transparent;
     position: absolute;

@@ -5,26 +5,26 @@
 }
 
 .order__title {
-  margin: 0;
+  display: block;
+  margin: 0 auto;
   font-size: 27px;
   line-height: 30px;
-  padding: 72px 30px;
-  width: 260px;
+  padding: 72px 0;
+  width: 100%;
+  text-align: center;
   background-color: #f1f1f1;
-  margin-left: -30px;
 }
 
 .order__description {
+  display: block;
   padding: 11px 0;
+  margin: 13px auto;
   font-size: 13px;
   line-height: 24px;
 }
 
 .order-form__item {
-  width: 260px;
   border: 0;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -54,7 +54,7 @@
 }
 
 .order-form__item--phone {
-  margin-bottom: 26px;
+  margin-bottom: 22px;
 }
 
 .order-form__item--email {
@@ -87,6 +87,14 @@
   width: 100%;
   border: none;
   border-bottom: 2px solid #000000;
+
+  &:hover {
+    border-color: #62d1ba;
+  }
+}
+
+.order-form__item--wishes {
+  margin-bottom: 14px;
 }
 
 .order-form__input-text--wishes {
@@ -94,6 +102,16 @@
   height: 140px;
   width: 100%;
   border: 2px solid #000000;
+
+  &:hover {
+    border-color: #62d1ba;
+  }
+}
+
+.order-form__button-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .order-form__remark {
@@ -101,34 +119,32 @@
   line-height: 16px;
 }
 
-.button-form {
-  margin: 28px 0 56px 0;
+.button--form {
+  margin: 30px auto 56px auto;
 }
 
 @media (min-width: @tablet-width) {
   .order__title {
     font-size: 43px;
     line-height: 50px;
-    width: 628px;
-    text-align: center;
-    padding: 90px 70px 82px 70px;
-    margin: 0 0 64px -50px;
+    padding: 90px 0 82px 0;
+    margin: 0 auto 64px auto;
   }
 
   .order__description {
     font-size: 17px;
     line-height: 30px;
-  }
-
-  .order-form__item {
-    padding: 30px 50px 30px 50px;
-    margin: 0 0 0 -50px;
-    width: 668px;
+    margin-bottom: 48px;
   }
 
   .order-form__item--color {
-    padding: 50px 50px 26px 50px;
+    margin-top: 8px;
+    padding: 50px 50px 12px 50px;
     background-color: #f1f1f1;
+  }
+
+  .order-form__item--email {
+    padding: 4px 50px 12px 50px;
   }
 
   .order-form__title {
@@ -173,7 +189,8 @@
   }
 
   .order-form__item--fio {
-    padding: 55px 50px;
+    margin: 0 auto;
+    padding: 50px 50px 14px 50px;
   }
 
   .order-form__item--fio .order-form__label {
@@ -190,12 +207,6 @@
     width: 410px;
   }
 
-  .order-form__item--phone {
-    margin: -34px 0 0 -50px;
-    padding: 52px 50px 0 50px;
-    background-color: #f1f1f1;
-  }
-
   .order-form__input-text {
     font-size: 19px;
     line-height: 18px;
@@ -205,11 +216,6 @@
   .order-form__item--phone .order-form__input-text,
   .order-form__item--email .order-form__input-text {
     width: 481px;
-  }
-
-  .order-form__item--email {
-    padding: 24px 50px 50px 50px;
-    background-color: #f1f1f1;
   }
 
   .order-form__item--wishes {
@@ -225,17 +231,20 @@
     height: 127px;
   }
 
+  .order-form__button-flex {
+    flex-direction: row;
+  }
+
   .order-form__remark {
     font-size: 17px;
     line-height: 30px;
     order: 1;
-    width: 352px;
-    align-self: flex-end;
-    margin: -92px 0 62px 0;
+    margin: 48px 0 0 0;
+    padding: 0;
   }
 
-  .button-form {
-    margin: 22px 0 50px 0;
+  .button--form {
+    margin: 40px 0 50px 0;
     width: 176px;
   }
 }
@@ -245,18 +254,13 @@
     font-size: 53px;
     line-height: 57px;
     text-align: center;
-    padding: 90px 100px 102px 100px;
-    width: 950px;
+    padding: 90px 0 102px 0;
   }
 
   .order__description {
     width: 700px;
     padding: 60px 175px 0 175px;
-  }
-
-  .order-form__item {
-    padding: 28px 50px 32px 50px;
-    width: 1050px;
+    margin-bottom: 46px;
   }
 
   .order-form__title {
@@ -271,7 +275,7 @@
   }
 
   .order-form__item--fio {
-    padding: 50px 50px 56px 50px;
+    padding: 50px 50px 10px 50px;
   }
 
   .order-form__item--fio .order-form__list {
@@ -284,11 +288,11 @@
   }
 
   .order-form__item--phone {
-    padding: 50px 50px 24px 50px;
+    padding: 10px 50px 0 50px;
   }
 
   .order-form__item--email {
-    padding: 0 50px 52px 50px;
+    padding: 0 50px 8px 50px;
   }
 
   .order-form__radio {
@@ -309,7 +313,8 @@
   .order-form__item--color {
     justify-content: flex-start;
     background-color: #f1f1f1;
-    padding: 36px 50px 38px 50px;
+    margin-top: 12px;
+    padding: 40px 50px 18px 50px;
   }
 
   .order-form__label--checkbox {
@@ -323,7 +328,7 @@
   }
 
   .order-form__checkbox {
-    margin: 14px 0 10px 0;
+    margin: 12px 0 10px 0;
   }
 
   .order-form__item--phone .order-form__input-text,
@@ -363,11 +368,15 @@
     margin-right: 175px;
   }
 
-  .order-form__remark {
-    margin: -118px 175px 62px 0;
+  .order-form__button-flex {
+    width: 700px;
   }
 
-  .button-form {
-    margin: 0 0 72px 175px;
+  .order-form__remark {
+    margin-top: -6px;
+  }
+
+  .button--form {
+    margin: -16px 0 50px 0;
   }
 }
