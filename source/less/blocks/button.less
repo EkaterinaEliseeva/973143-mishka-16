@@ -4,11 +4,12 @@
   font-size: 17px;
   line-height: 20px;
   font-weight: 700;
-  padding: 14px 25px 15px 25px;
+  // padding: 14px 25px 15px 25px;
+  padding: 14px 0 15px 0;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  width: 205px;
+  width: auto;
   border: 2px solid #444444;
 
   &:hover {
@@ -21,39 +22,31 @@
   }
 }
 
+.button--special-offer {
+  width: auto;
+}
+
+.button--reviews {
+  width: 100%;
+}
+
+.button--contacts {
+  width: auto;
+}
+
 @media (min-width: @tablet-width) {
   .button--special-offer {
-    width: 236px;
-    margin: 0;
-  }
-
-  .button--reviews {
-    order: -1;
-    align-self: center;
-    width: 122px;
+    width: 100%;
   }
 
   .button--contacts {
-    width: 178px;
-    margin: 0 auto;
+    width: 24%;
   }
 }
 
 @media (min-width: @desktop-width) {
   .button--special-offer {
-    width: 236px;
-    margin: 0;
-  }
-
-  .button--reviews {
-    order: -1;
-    align-self: center;
-    width: 122px;
-    margin-right: 0;
-  }
-
-  .button--contacts {
-    width: 178px;
+    width: 290px;
     margin: 0;
   }
 }

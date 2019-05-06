@@ -3,7 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  padding: 26px 30px 40px 30px;
+  padding: 24px 30px 40px 30px;
 }
 
 .special-offer__flex::after {
@@ -11,7 +11,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 320px;
+  width: 100%;
   height: 7px;
   background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: repeat-x;
@@ -32,7 +32,7 @@
 }
 
 .special-offer__text {
-  margin: 22px 0 18px 0;
+  margin: 22px 0 16px 0;
   font-size: 15px;
   line-height: 24px;
   font-weight: 400;
@@ -42,28 +42,38 @@
   font-size: 15px;
   line-height: 20px;
   font-weight: 400;
-  margin: 0 0 25px 0;
+  margin: 0 0 28px 0;
   padding: 0;
+  width: 100%;
 }
 
 .special-offer__feature {
-  position: relative;
-  padding: 10px 0 9px 0;
-  width: 95px;
+  padding: 9px 0 9px 0;
+  width: 36%;
 }
 
-.special-offer__feature::after {
+.special-offer__value {
+  width: 64%;
+}
+
+.special-offer__item {
+  position: relative;
+}
+
+.special-offer__item::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 260px;
+  width: 100%;
   height: 1px;
   background-color: #ececec;
 }
 
 .special-offer__image {
   margin-bottom: 6px;
+  width: 100%;
+  height: auto;
 }
 
 .special-offer__price {
@@ -76,54 +86,70 @@
 
 @media (min-width: @tablet-width) {
   .special-offer__flex {
-    padding: 36px 50px 54px 50px;
-    height: 530px;
+    padding: 36px 50px 64px 50px;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .special-offer__flex::after {
     bottom: -5px;
     height: 17px;
-    width: 768px;
+    width: 100%;
     transform: rotate(180deg);
     background-size: 768px 100%;
   }
 
   .special-offer__title {
     padding: 10px 0;
+    width: 65%;
+    order: -2;
   }
 
   .special-offer__subtitle {
-    order: 1;
-    width: 50px;
+    order: -1;
+    width: 12%;
+    margin: 0 24px 0 0;
     display: flex;
-    margin: 0 0 0 142px;
     text-align: center;
     padding: 20px 0;
   }
 
+  .special-offer__wrapper-text {
+    width: 43%;
+    padding-bottom: 100px;
+  }
+
   .special-offer__text {
-    margin: 40px 0 33px 0;
+    order: 0;
+    margin: 30px 0 33px 0;
     font-size: 17px;
     line-height: 30px;
-    width: 290px;
   }
 
   .special-offer__image {
-    order: 2;
-    width: 334px;
+    order: 1;
+    width: 333px;
     height: 404px;
-    margin: 38px 0 0 -94px;
+    margin: 38px 0 0 0;
+  }
+
+  .special-offer__wrapper-price {
+    width: 43%;
+    order: 2;
+    margin-top: -110px;
   }
 
   .special-offer__features {
-    width: 334px;
     margin: 0 0 56px 0;
   }
 
+  .special-offer__feature {
+    width: 34%;
+  }
+
   .special-offer__price {
-    width: 334px;
     text-align: center;
-    margin: 0 0 34px -22px;
+    margin: 0 0 34px 0;
     font-size: 20px;
     line-height: 24px;
   }
@@ -131,8 +157,8 @@
 
 @media (min-width: @desktop-width) {
   .special-offer__flex {
-    padding: 44px 50px 80px 50px;
-    height: 600px;
+    padding: 44px 50px 86px 50px;
+    justify-content: flex-start;
   }
 
   .special-offer__flex::after {
@@ -146,42 +172,54 @@
   .special-offer__title {
     z-index: 2;
     padding: 10px 0;
+    order: 0;
   }
 
   .special-offer__subtitle {
     order: -1;
-    width: 55px;
+    flex-basis: 55px;
     margin: 0;
-    padding: 22px 74px 20px 46px;
-    flex-basis: 100%;
+    padding: 22px 52px 10px 46px;
+  }
+
+  .special-offer__wrapper-text {
+    margin: 0 0 0 175px;
+    order: 1;
+    width: 350px;
+    padding-bottom: 100px;
+  }
+
+  .special-offer__wrapper-price {
+    width: 300px;
+    order: 3;
+    margin: -110px 0 0 175px;
   }
 
   .special-offer__text {
-    width: 300px;
-    padding: 0 50px 0 0;
-    margin: 40px 16px 46px 0;
+    padding: 0 54px 0 0;
+    margin: 40px 0 46px 0;
   }
 
   .special-offer__feature {
-    padding: 10px 0 10px 0;
+    padding: 9px 0 9px 0;
+    width: 94px;
   }
 
   .special-offer__image {
     order: 2;
     width: 525px;
     height: 636px;
-    margin: -40px 0 0 -180px;
+    margin: -120px 0 0 0;
   }
 
   .special-offer__features {
-    width: 350px;
-    margin: 0 0 108px 0;
+    margin: 0;
   }
 
   .special-offer__price {
     width: 350px;
     text-align: center;
-    margin: 0 0 32px -30px;
+    margin: 0 0 34px -30px;
     font-size: 20px;
     line-height: 24px;
   }

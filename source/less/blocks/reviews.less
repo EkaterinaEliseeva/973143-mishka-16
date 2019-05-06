@@ -16,8 +16,8 @@
   content: "";
   position: absolute;
   bottom: -50px;
-  left: -30px;
-  width: 320px;
+  left: 0;
+  width: 100%;
   height: 7px;
   background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: repeat-x;
@@ -49,11 +49,12 @@
 
 .reviews__arrows {
   display: flex;
-  margin-bottom: 38px;
+  margin-bottom: 36px;
+  width: 100%;
 }
 
 .reviews__arrow {
-  width: 130px;
+  flex-basis: 50%;
   height: 50px;
   border: 1px solid #ececec;
 }
@@ -74,7 +75,8 @@
   position: absolute;
   content: "";
   top: 11px;
-  left: 40px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 50px;
   height: 26px;
   background-image: url("../img/icon-left-arrow.svg");
@@ -96,7 +98,8 @@
   position: absolute;
   content: "";
   top: 11px;
-  left: 40px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 50px;
   height: 26px;
   background-image: url("../img/icon-right-arrow.svg");
@@ -109,8 +112,8 @@
   }
 
   .reviews__flex {
-    width: 668px;
-    margin: 0 -50px 0 -50px;
+    width: auto;
+    margin: 0;
     background-color: #ffffff;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
@@ -121,7 +124,7 @@
     transform: rotate(180deg);
     background-size: 768px 100%;
     height: 17px;
-    width: 768px;
+    width: 100%;
     bottom: -85px;
     left: 0;
   }
@@ -132,7 +135,7 @@
   }
 
   .reviews__text {
-    width: 670px;
+    width: 100%;
     margin-bottom: 54px;
   }
 
@@ -146,35 +149,45 @@
 
   .reviews__arrow:first-child::before {
     top: 11px;
-    left: 15px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 50px;
     height: 26px;
   }
 
   .reviews__arrow:last-child::before {
     top: 11px;
-    left: 15px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 50px;
     height: 26px;
+  }
+
+  .button--reviews {
+    order: -1;
+    align-self: center;
+    margin-top: -4px;
+    width: 122px;
+    padding: 14px 25px 15px 25px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .reviews {
     font-size: 17px;
-    margin-bottom: 65px;
+    margin-bottom: 90px;
   }
 
   .reviews__flex {
     width: 875px;
-    padding: 52px 0 66px 175px;
+    padding: 26px 0 40px 175px;
     margin: 0 auto;
   }
 
   .reviews__flex::after {
     background-size: 1050px 100%;
     width: 1050px;
-    bottom: -90px;
+    bottom: -120px;
     height: 23px;
   }
 
@@ -194,5 +207,12 @@
 
   .reviews__arrow {
     width: 80px;
+  }
+
+  .button--reviews {
+    order: -1;
+    align-self: center;
+    width: 122px;
+    margin: -1px 0 0 0;
   }
 }
