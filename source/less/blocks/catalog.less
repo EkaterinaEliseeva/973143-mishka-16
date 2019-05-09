@@ -148,6 +148,10 @@
   height: auto;
 }
 
+.catalog-item__video-play-svg {
+  cursor: pointer;
+}
+
 .catalog-item__video-play {
   position: absolute;
   top: 50%;
@@ -178,6 +182,18 @@
     font-size: 43px;
     line-height: 50px;
     padding: 94px 0 78px 0;
+    position: relative;
+  }
+
+  .catalog__title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 24px;
+    width: 100%;
+    background-image: url(../../img/bg-zigzag-fill.svg);
+    background-repeat: repeat-x;
   }
 
   .catalog-item {
@@ -272,6 +288,11 @@
     line-height: 57px;
     width: 100%;
     padding: 90px 0 104px 0;
+  }
+
+  .catalog__title::after {
+    bottom: -10px;
+    height: 34px;
   }
 
   .catalog__list {

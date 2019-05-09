@@ -55,19 +55,78 @@
   display: flex;
 }
 
-.order-form__radio {
-  margin: 11px 0;
-  width: 40px;
-  height: 40px;
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    -webkit-clip-path: inset(100%);
 }
 
 .order-form__label {
   align-self: center;
-  margin-left: 20px;
   width: auto;
   font-size: 17px;
   line-height: 18px;
   font-weight: 700;
+  position: relative;
+  margin: 20px 0;
+  margin-left: 20px;
+}
+
+.order-form__label--radio::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -62px;
+  width: 36px;
+  height: 36px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 50%;
+}
+
+.order-form__radio:checked ~ .order-form__label--radio::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -50px;
+  width: 16px;
+  height: 16px;
+  background-color: #62d1ba;
+  border-radius: 50%;
+}
+
+.order-form__label--checkbox::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -64px;
+  width: 35px;
+  height: 35px;
+  background-color: #ffffff;
+  border: 2px solid #444444;
+}
+
+.order-form__checkbox:checked ~ .order-form__label--checkbox::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: -54px;
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  border-bottom: 2px solid #000000;
+  border-right: 2px solid #000000;
+  transform: rotate(45deg);
 }
 
 .order-form__checkbox {
@@ -142,6 +201,7 @@
 }
 
 .button--form {
+  cursor: pointer;
   width: 100%;
   margin: 30px auto 56px auto;
 }
@@ -152,6 +212,18 @@
     line-height: 50px;
     padding: 90px 0 82px 0;
     margin: 0 auto 64px auto;
+    position: relative;
+  }
+
+  .order__title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 24px;
+    width: 100%;
+    background-image: url(../../img/bg-zigzag-fill.svg);
+    background-repeat: repeat-x;
   }
 
   .order__description {
@@ -168,7 +240,7 @@
   .order-form__item--color {
     margin-top: 20px;
     padding: 44px 0 14px 0;
-    background-color: red;
+    background-color: #f1f1f1;
   }
 
   .order-form__title {
@@ -283,6 +355,11 @@
     line-height: 57px;
     text-align: center;
     padding: 90px 0 102px 0;
+  }
+
+  .order__title::after {
+    bottom: -10px;
+    height: 34px;
   }
 
   .order__description {

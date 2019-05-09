@@ -13,7 +13,7 @@
           <div class="container page-header__container">
             <a class="page-header__logo">
               <picture>
-                <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
                 <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
                 <img class="page-header__logo-img" src="img/logo-mobile.svg" alt="Логотип Мишка" width="86" height="35">
               </picture>
@@ -85,7 +85,11 @@
               </tr>
             </table>
           </div>
-          <img src="img/triple-set-mobile@1x.jpg" alt="#" class="special-offer__image" width="333" height="404">
+          <picture class="special-offer__img-wrapper">
+            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+            <img class="special-offer__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки" width="333" height="404">
+          </picture>
           <div class="special-offer__wrapper-price">
             <p class="special-offer__price">Цена: 990 руб.</p>
             <a href="#" class="button button--special-offer">Заказать</a>
@@ -142,6 +146,11 @@
               <p class="contacts__value contacts__value--address">г. Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8,&nbsp;офис 101</p>
             </div>
           </div>
+          <picture class="contacts__map visually-hidden">
+            <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x ">
+            <img class="contacts__map-img" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Карта" width="322" height="457">
+          </picture>
           <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2376.7432383994264!2d30.322739866239043!3d59.93886445391149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1555959673549!5m2!1sru!2sru" width="320" height="458" frameborder="0" allowfullscreen> </iframe>
           <div class="container container--contacts-button">
             <a href="#" class="button button--contacts">Напишите нам</a>

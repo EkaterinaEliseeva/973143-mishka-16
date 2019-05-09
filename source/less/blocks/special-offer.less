@@ -70,10 +70,9 @@
   background-color: #ececec;
 }
 
-.special-offer__image {
-  margin-bottom: 6px;
+.special-offer__img-wrapper {
   width: 100%;
-  height: auto;
+  margin-bottom: 6px;
 }
 
 .special-offer__price {
@@ -126,15 +125,20 @@
     line-height: 30px;
   }
 
-  .special-offer__image {
-    order: 1;
+  .special-offer__img-wrapper {
     width: 333px;
-    height: 404px;
+    order: 1;
     margin: 38px 0 0 0;
   }
 
+  .special-offer__image {
+    width: 333px;
+    height: 404px;
+  }
+
   .special-offer__wrapper-price {
-    width: 43%;
+    width: 100%;
+    padding-right: 376px;
     order: 2;
     margin-top: -110px;
   }
@@ -143,11 +147,8 @@
     margin: 0 0 56px 0;
   }
 
-  .special-offer__feature {
-    width: 34%;
-  }
-
   .special-offer__price {
+    width: auto;
     text-align: center;
     margin: 0 0 34px 0;
     font-size: 20px;
@@ -205,11 +206,14 @@
     width: 94px;
   }
 
-  .special-offer__image {
+  .special-offer__img-wrapper {
     order: 2;
+    margin: -120px 0 0 0;
+  }
+
+  .special-offer__image {
     width: 525px;
     height: 636px;
-    margin: -120px 0 0 0;
   }
 
   .special-offer__features {
