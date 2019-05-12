@@ -118,14 +118,24 @@ input[type="radio"].visually-hidden {
 .order-form__checkbox:checked ~ .order-form__label--checkbox::after {
   content: "";
   position: absolute;
-  top: 1px;
-  left: -54px;
-  width: 16px;
-  height: 16px;
-  background-color: #ffffff;
+  top: 2px;
+  left: -55px;
+  width: 23px;
+  height: 18px;
+  background-color: transparent;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+}
+
+.order-form__input-text {
+  height: 50px;
+  width: 100%;
+  border: none;
   border-bottom: 2px solid #000000;
-  border-right: 2px solid #000000;
-  transform: rotate(45deg);
+
+  &:hover {
+    border-color: #62d1ba;
+  }
 }
 
 .order-form__item--fio {
@@ -144,26 +154,52 @@ input[type="radio"].visually-hidden {
 
 .order-form__item--phone {
   margin: 0 0 30px 0;
+  position: relative;
 }
 
-.order-form__item--phone .order-form__input-text,
-.order-form__item--email .order-form__input-text {
+.order-form__input-text--phone {
   margin-top: -6px;
+  &:hover ~ .order-form__phone-icon {
+    fill: #62d1ba;
+  }
+
+  &:active ~ .order-form__phone-icon {
+    fill: #62d1ba;
+  }
+}
+
+.order-form__phone-icon {
+  position: absolute;
+  top: 36px;
+  right: 45px;
+  width: 25px;
+  height: 24px;
+  fill: #cccccc;
 }
 
 .order-form__item--email {
   margin-bottom: 32px;
+  position: relative;
 }
 
-.order-form__input-text {
-  padding: 0;
-  height: 50px;
-  width: 100%;
-  border: none;
-  border-bottom: 2px solid #000000;
+.order-form__email-icon {
+  position: absolute;
+  top: 38px;
+  right: 45px;
+  width: 25px;
+  height: 24px;
+  fill: #cccccc;
+}
 
-  &:hover {
-    border-color: #62d1ba;
+.order-form__input-text--email {
+  margin-top: -6px;
+
+  &:hover ~ .order-form__email-icon {
+    fill: #62d1ba;
+  }
+
+  &:active ~ .order-form__email-icon {
+    fill: #62d1ba;
   }
 }
 
@@ -173,6 +209,7 @@ input[type="radio"].visually-hidden {
 
 .order-form__input-text--wishes {
   margin: 10px 0 0 0;
+  padding: 10px;
   height: 136px;
   width: 100%;
   border: 2px solid #000000;
@@ -237,7 +274,8 @@ input[type="radio"].visually-hidden {
   }
 
   .order-form__title {
-    width: 25%;
+    min-width: 25%;
+    width: auto;
     margin-top: 26px;
   }
 
@@ -285,17 +323,25 @@ input[type="radio"].visually-hidden {
 
   .order-form__item--phone {
     margin: -4px 0 24px 0;
+    flex-wrap: nowrap;
+  }
+
+  .order-form__email-icon,
+  .order-form__phone-icon {
+    top: 22px;
+    right: 65px;
   }
 
   .order-form__item--email {
     padding: 0 50px 2px 50px;
+    flex-wrap: nowrap;
   }
 
-  .order-form__item--phone .order-form__input-text,
-  .order-form__item--email .order-form__input-text {
-    width: 75%;
+  .order-form__input-text--phone,
+  .order-form__input-text--email {
+    width: 100%;
+    padding-right: 50px;
     margin: 8px 0 0 0;
-    padding: 0;
     background-color: #f1f1f1;
   }
 
@@ -307,8 +353,8 @@ input[type="radio"].visually-hidden {
     margin: 10px 0 0 -2px;
     font-size: 19px;
     line-height: 18px;
-    width: 74%;
-    padding: 10px 0 0 0;
+    width: auto;
+    padding: 10px;
     height: 127px;
   }
 
@@ -352,6 +398,7 @@ input[type="radio"].visually-hidden {
   }
 
   .order-form__title {
+    min-width: 0;
     margin: 30px 0 0 0;
     width: 114px;
     padding-left: 61px;
@@ -422,8 +469,8 @@ input[type="radio"].visually-hidden {
     width: 165px;
   }
 
-  .order-form__item--phone .order-form__input-text,
-  .order-form__item--email .order-form__input-text {
+  .order-form__input-text--phone,
+  .order-form__input-text--email {
     width: 660px;
     padding: 0 20px 0 20px;
     margin: 3px 0 3px 0;
@@ -434,6 +481,16 @@ input[type="radio"].visually-hidden {
   .order-form__item--email .order-form__title,
   .order-form__item--wishes .order-form__title {
     margin-top: 20px;
+  }
+
+  .order-form__email-icon {
+    top: 16px;
+    right: 240px;
+  }
+
+  .order-form__phone-icon {
+    top: 23px;
+    right: 240px;
   }
 
   .order-form__item--fio .order-form__input-text--name {
