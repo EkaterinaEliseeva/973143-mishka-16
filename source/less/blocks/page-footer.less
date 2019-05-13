@@ -25,8 +25,8 @@
   font-weight: 700;
   position: relative;
 
-  &:hover::after {
-    background-image: url("../img/logo-htmlacademy--hover.svg");
+  &:hover .page-footer__copyright-icon {
+    fill: #46c1ae;
   }
 
   &:active {
@@ -34,14 +34,13 @@
   }
 }
 
-.page-footer__copyright::after {
+.page-footer__copyright-icon {
   position: absolute;
-  content: "";
   top: -5px;
   right: 0;
   height: 34px;
   width: 27px;
-  background-image: url("../img/logo-htmlacademy.svg");
+  fill: #63d1bb;
 }
 
 @media (min-width: @tablet-width) {
@@ -57,7 +56,7 @@
     display: block;
     margin-right: 74px;
 
-    &:hover .page-footer__logo-fill {
+    &:hover {
       fill: #46c1ae;
     }
 
@@ -71,7 +70,7 @@
     padding: 12px 58px 12px 0;
   }
 
-  .page-footer__copyright::after {
+  .page-footer__copyright-icon {
     top: 7px;
     right: 0;
   }

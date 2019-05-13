@@ -17,6 +17,10 @@
 
   &:hover {
     opacity: 0.6;
+
+    .main-nav__item-icon {
+      fill: #63d1bb;
+    }
   }
 
   &:active {
@@ -35,15 +39,7 @@
   left: 30px;
   width: 18px;
   height: 18px;
-
-  .path-fill {
-    fill: #d3d2d2;
-  }
-}
-
-.main-nav__item--search:hover .path-fill,
-.main-nav__item--cart:hover .path-fill {
-  fill: #63d1bb;
+  fill: #d3d2d2;
 }
 
 .main-nav__item--cart-icon {
@@ -52,10 +48,7 @@
   left: 30px;
   width: 21px;
   height: 18px;
-
-  .path-fill {
-    fill: #d3d2d2;
-  }
+  fill: #d3d2d2;
 }
 
 @media (max-width: @mobile-width-only) {
