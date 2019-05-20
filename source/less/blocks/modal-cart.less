@@ -1,0 +1,70 @@
+.modal-cart {
+  z-index: 100;
+  position: fixed;
+  color: #000000;
+  background-color: #ffffff;
+  width: 360px;
+  top: 100px;
+  left: 50%;
+  margin-left: -284px;
+  border: 1px solid #c7c7c7;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 100px 45px 108px;
+  display: none;
+  flex-wrap: wrap;
+}
+
+.modal-cart--show {
+  display: flex;
+}
+
+.modal-cart__title {
+  width: 100%;
+  font-size: 30px;
+  line-height: 57px;
+  text-transform: uppercase;
+}
+
+.modal-cart__text {
+  width: 100%;
+  font-size: 17px;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.modal-cart__form {
+  width: 100%;
+}
+
+.modal-cart__input-block {
+  .list-none;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 54px 0;
+}
+
+.modal-cart__label {
+  padding: 20px 50px;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+  border: 2px solid @ec;
+
+  &:hover {
+    border: 2px solid #c7c7c7;
+  }
+}
+
+.modal-cart__input:checked ~ .modal-cart__label {
+  border: 2px solid #63d1bb;
+}
+
+.modal-cart__submit {
+  width: 100%;
+  line-height: 16px;
+  padding: 20px 0;
+  background-color: #63d1bb;
+  border: none;
+  color: #ffffff;
+}

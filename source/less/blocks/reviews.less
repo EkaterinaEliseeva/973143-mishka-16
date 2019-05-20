@@ -5,26 +5,6 @@
   margin-bottom: 66px;
 }
 
-.reviews__flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  position: relative;
-}
-
-.reviews__flex::after {
-  content: "";
-  position: absolute;
-  bottom: -50px;
-  left: 0;
-  width: 100%;
-  height: 7px;
-  background-image: url("../img/bg-zigzag-line.svg");
-  background-repeat: repeat-x;
-  transform: rotate(180deg);
-  background-size: 320px 100%;
-}
-
 .reviews__title {
   margin-bottom: 10px;
 }
@@ -56,7 +36,7 @@
 .reviews__arrow {
   flex-basis: 50%;
   height: 50px;
-  border: 1px solid #ececec;
+  border: 1px solid @ec;
 }
 
 .reviews__arrow:first-child {
@@ -111,29 +91,6 @@
     margin-bottom: 82px;
   }
 
-  .reviews__flex {
-    width: auto;
-    margin: 0;
-    background-color: #ffffff;
-    background-image: url("../img/review@1x.jpg");
-    background-size: 350px 457px;
-    background-repeat: no-repeat;
-    padding: 54px 50px 20px 50px;
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/review@2x.jpg");
-    }
-  }
-
-  .reviews__flex::after {
-    transform: rotate(180deg);
-    background-size: 768px 100%;
-    height: 17px;
-    width: 100%;
-    bottom: -85px;
-    left: 0;
-  }
-
   .reviews__title {
     order: -2;
     padding: 22px 0;
@@ -167,33 +124,12 @@
     width: 50px;
     height: 26px;
   }
-
-  .button--reviews {
-    order: -1;
-    align-self: center;
-    margin-top: -4px;
-    width: 122px;
-    padding: 14px 25px 15px 25px;
-  }
 }
 
 @media (min-width: @desktop-width) {
   .reviews {
     font-size: 17px;
     margin-bottom: 90px;
-  }
-
-  .reviews__flex {
-    width: 875px;
-    padding: 26px 0 40px 175px;
-    margin: 0 auto;
-  }
-
-  .reviews__flex::after {
-    background-size: 1050px 100%;
-    width: 1050px;
-    bottom: -120px;
-    height: 23px;
   }
 
   .reviews__title {
@@ -212,12 +148,5 @@
 
   .reviews__arrow {
     width: 80px;
-  }
-
-  .button--reviews {
-    order: -1;
-    align-self: center;
-    width: 122px;
-    margin: -1px 0 0 0;
   }
 }

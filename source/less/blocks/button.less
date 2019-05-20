@@ -34,13 +34,31 @@
   width: auto;
 }
 
+.button--catalog {
+  margin: 20px auto 30px auto;
+}
+
 @media (min-width: @tablet-width) {
   .button--special-offer {
     width: 100%;
   }
 
   .button--contacts {
-    width: 24%;
+    padding: 14px 25px 15px 25px;
+    width: 178px;
+    margin: 0 auto;
+  }
+
+  .button--catalog {
+    margin: 20px auto 44px auto;
+  }
+
+  .button--reviews {
+    order: -1;
+    align-self: center;
+    margin-top: -4px;
+    width: 122px;
+    padding: 14px 25px 15px 25px;
   }
 }
 
@@ -48,5 +66,22 @@
   .button--special-offer {
     width: 290px;
     margin: 0;
+  }
+
+  .button--catalog {
+    width: 230px;
+    margin: 42px 0 32px 0;
+  }
+
+  .button--reviews {
+    order: -1;
+    align-self: center;
+    width: 122px;
+    margin: -1px 0 0 0;
+  }
+
+  .button--contacts {
+    padding: 14px 25px 15px 25px;
+    width: 178px;
   }
 }
