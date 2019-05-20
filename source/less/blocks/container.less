@@ -5,6 +5,32 @@
   margin: 0;
 }
 
+.container--page-header {
+  display: flex;
+  align-items: center;
+}
+
+.container--special-offer {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 24px 30px 40px 30px;
+}
+
+.container--special-offer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  transform: rotate(180deg);
+  background-size: 320px 100%;
+}
+
 .container--promo {
   width: auto;
   min-width: 320px;
@@ -15,9 +41,91 @@
   width: 100vw;
 }
 
+.container--advantages {
+  padding-top: 28px;
+}
+
+.container--reviews {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+}
+
+.container--reviews::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  transform: rotate(180deg);
+  background-size: 320px 100%;
+}
+
+.container--page-footer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container--process {
+  padding: 0 30px;
+}
+
 @media (min-width: @tablet-width) {
   .container {
     padding: 0 50px;
+  }
+
+  .container--special-offer {
+    padding: 36px 50px 60px 50px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .container--special-offer::after {
+    bottom: -5px;
+    height: 17px;
+    width: 100%;
+    transform: rotate(180deg);
+    background-size: 768px 100%;
+  }
+
+  .container--advantages {
+    padding-top: 54px;
+  }
+
+  .container--reviews {
+    width: auto;
+    margin: 0;
+    background-color: #ffffff;
+    background-image: url("../img/review@1x.jpg");
+    background-size: 350px 457px;
+    background-repeat: no-repeat;
+    padding: 54px 50px 20px 50px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
+
+    .container--page-footer {
+      justify-content: space-between;
+    }
+  }
+
+  .container--reviews::after {
+    transform: rotate(180deg);
+    background-size: 768px 100%;
+    height: 17px;
+    width: 100%;
+    bottom: -85px;
+    left: 0;
+  }
+
+  .container--process {
+    padding: 0 40px;
   }
 }
 
@@ -26,5 +134,54 @@
     width: 1050px;
     padding: 0 50px;
     margin: 0 auto;
+  }
+
+  .container--special-offer {
+    padding: 44px 50px 84px 50px;
+    justify-content: flex-start;
+  }
+
+  .container--special-offer::after {
+    bottom: -10px;
+    left: 50px;
+    height: 23px;
+    background-size: 1050px 100%;
+    width: 1050px;
+  }
+
+  .container--advantages {
+    width: 700px;
+    padding: 66px 175px 16px 175px;
+  }
+
+  .container--reviews {
+    width: 875px;
+    padding: 22px 0 38px 175px;
+    margin: 0 auto;
+  }
+
+  .container--reviews::after {
+    background-size: 1050px 100%;
+    width: 1050px;
+    bottom: -120px;
+    height: 23px;
+  }
+
+  .container--page-footer {
+    justify-content: space-between;
+  }
+
+  .container--process {
+    order: 1;
+    margin: -276px 58px 0 760px;
+    padding: 0;
+    width: 227px;
+  }
+
+  .container--contacts-button {
+    width: 350px;
+    padding: 0;
+    order: 2;
+    margin: -108px 0 0 -58px;
   }
 }
