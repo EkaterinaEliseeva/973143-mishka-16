@@ -9,7 +9,7 @@
     <link rel="preload" href="fonts/opensans.woff" as="font">
     <link rel="preload" href="fonts/opensansbold.woff2" as="font">
     <link rel="preload" href="fonts/opensansbold.woff" as="font">
-    <script src="js/picturefill.min.js"></script>
+    <script src="js/picturefill.js"></script>
   </head>
   <body>
     <div style="display:none">
@@ -17,16 +17,16 @@
     </div>
     <header class="page-header">
       <nav class="main-nav main-nav--closed main-nav--nojs">
-        <div class="page-header__wrapper">
-          <div class="container container--page-header">
-            <a href="index.html" class="page-header__logo">
+        <div class="main-nav__wrapper">
+          <div class="container container--main-nav">
+            <a href="index.html" class="main-nav__logo">
               <picture>
                 <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
                 <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-                <img class="page-header__logo-img" src="img/logo-mobile.svg" alt="Логотип Мишка" width="86" height="35">
+                <img class="main-nav__logo-img" src="img/logo-mobile.svg" alt="Логотип Мишка" width="86" height="35">
               </picture>
             </a>
-            <button class="page-header__toggle" type="button">Открыть меню</button>
+            <button class="main-nav__toggle" type="button">Открыть меню</button>
           </div>
         </div>
         <ul class="main-nav__list">
@@ -38,7 +38,7 @@
           </li>
           <li class="main-nav__item main-nav__item--search">
             <a href="#" class="main-nav__link main-nav__link--icon" aria-label="Поиск по сайту">
-              <svg class="main-nav__item-icon main-nav__item--search-icon" width="18" height="18" role="img">
+              <svg class="main-nav__item-icon main-nav__item-icon--search" width="18" height="18" role="img">
                 <use xlink:href="#icon-search"></use>
               </svg>
               <span class="main-nav__item-text">Поиск по сайту</span>
@@ -46,16 +46,16 @@
           </li>
           <li class="main-nav__item main-nav__item--cart">
             <a href="#" class="main-nav__link main-nav__link--icon">
-              <svg class="main-nav__item-icon main-nav__item--cart-icon" width="21" height="18" role="presentation" aria-hidden="true" focusable="false">
+              <svg class="main-nav__item-icon main-nav__item-icon--cart" width="21" height="18" role="presentation" aria-hidden="true" focusable="false">
                 <use xlink:href="#icon-cart"></use>
               </svg>
               <span class="main-nav__item-text">Корзина: пока пуста</span>
             </a>
           </li>
         </ul>
-        <a href="#" class="page-header__new">Новые поступления</a>
-        <a href="#" class="page-header__sale">Распродажа</a>
-        <a href="#" class="page-header__delivery">Бесплатная доставка по России</a>
+        <a href="#" class="main-nav__new">Новые поступления</a>
+        <a href="#" class="main-nav__sale">Распродажа</a>
+        <a href="#" class="main-nav__delivery">Бесплатная доставка по России</a>
       </nav>
     </header>
     <main class="page-form">
@@ -80,8 +80,8 @@
                 </li>
               </ul>
             </div>
-            <div class="order-form__item--gray">
-              <div class="order-form__item order-form__item--color container">
+            <div class="order-form__item order-form__item--gray">
+              <div class="container order-form__item order-form__item--color">
                 <h3 class="order-form__title">Цвет</h3>
                 <ul class="order-form__list order-form__list--color">
                   <li class="order-form__list-item order-form__list-item--color">
@@ -128,7 +128,7 @@
                 </li>
               </ul>
             </div>
-            <div class="order-form__item--gray">
+            <div class="order-form__item order-form__item--gray">
               <div class="order-form__item container order-form__item--phone">
                 <h3 class="order-form__title">Тел</h3>
                 <input class="order-form__input-text order-form__input-text--phone" type="tel" id="input-phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
@@ -148,7 +148,7 @@
             </div>
             <div class="order-form__item container order-form__item--wishes">
               <h3 class="order-form__title">Доп</h3>
-              <textarea class="order-form__input-text--wishes" name="wishes" id="order-wishes" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              <textarea class="order-form__input-text order-form__input-text--wishes" name="wishes" id="order-wishes" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
               <label class="visually-hidden" for="order-wishes">Пожелания к заказу</label>
             </div>
             <div class="container order-form__button-flex">
@@ -167,7 +167,7 @@
         </a>
         <ul class="social-networks">
           <li class="social-networks__item ">
-            <a href="#" class="social-networks__item--inst" aria-label="Мишка в Instagram">
+            <a href="#" class="social-networks__link social-networks__link--inst" aria-label="Мишка в Instagram">
               <span class="visually-hidden">Instagram</span>
               <svg class="social-networks__icon" width="22" height="21" role="img">
                 <use xlink:href="#icon-insta"></use>
@@ -175,7 +175,7 @@
             </a>
           </li>
           <li class="social-networks__item">
-            <a href="#" class="social-networks__item--fb" aria-label="Мишка в Facebook">
+            <a href="#" class="social-networks__link social-networks__link--fb" aria-label="Мишка в Facebook">
               <span class="visually-hidden">Facebook</span>
               <svg class="social-networks__icon" width="15" height="28" role="img">
                 <use xlink:href="#icon-fb"></use>
@@ -183,7 +183,7 @@
             </a>
           </li>
           <li class="social-networks__item">
-            <a href="#" class="social-networks__item--twitter" aria-label="Мишка в Twitter">
+            <a href="#" class="social-networks__link social-networks__link--twitter" aria-label="Мишка в Twitter">
               <span class="visually-hidden">Twitter</span>
               <svg class="social-networks__icon" width="23" height="20" role="img">
                 <use xlink:href="#icon-twitter"></use>
