@@ -49,21 +49,6 @@
   width: 100%;
 }
 
-.visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  border: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(100%);
-}
-
 .order-form__label {
   width: auto;
   font-size: 17px;
@@ -116,6 +101,10 @@ input[type="radio"].visually-hidden {
 
 .order-form__list-item--color {
   margin: 19.5px 0;
+}
+
+.order-form__item--gray {
+  width: 100%;
 }
 
 .order-form__item--color {
@@ -185,7 +174,7 @@ input[type="radio"].visually-hidden {
   border-bottom: 2px solid #000000;
   font-size: 17px;
   line-height: 18px;
-  color: #c7c7c7;
+  color: rgba(68, 68, 68, 0.3);
 
   &:hover {
     border-color: @tiffany;
@@ -193,11 +182,12 @@ input[type="radio"].visually-hidden {
 
   &:active {
     border-color: @tiffany;
+    color: rgba(68, 68, 68, 1);
   }
 
   &:focus {
     border-color: @tiffany;
-    color: #444444;
+    color: rgba(68, 68, 68, 1);
   }
 }
 
@@ -221,6 +211,7 @@ input[type="radio"].visually-hidden {
 .order-form__item--phone {
   margin: 0 0 32px 0;
   position: relative;
+  width: 100%;
 }
 
 .order-form__phone-icon {
@@ -248,6 +239,7 @@ input[type="radio"].visually-hidden {
 .order-form__item--email {
   margin-bottom: 32px;
   position: relative;
+  width: 100%;
 }
 
 .order-form__email-icon {
@@ -284,11 +276,11 @@ input[type="radio"].visually-hidden {
   padding: 14px;
   height: 110px;
   width: 100%;
-  border: 2px solid #000000;
+  border: 2px solid #444444;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
-  color: #c7c7c7;
+  color: rgba(68, 68, 68, 0.3);
 
   &:hover {
     border-color: @tiffany;
@@ -297,7 +289,7 @@ input[type="radio"].visually-hidden {
   &:focus,
   &:active {
     border-color: @tiffany;
-    color: #444444;
+    color: rgba(68, 68, 68, 1);
   }
 }
 
@@ -377,6 +369,7 @@ input[type="radio"].visually-hidden {
   }
 
   .order-form__item--gray {
+    display: block;
     background-color: #f1f1f1;
   }
 
@@ -399,6 +392,7 @@ input[type="radio"].visually-hidden {
     left: -80px;
     width: 50px;
     height: 50px;
+    background-color: #f1f1f1;
   }
 
   .order-form__checkbox:checked ~ .order-form__label--checkbox::after {
@@ -444,11 +438,13 @@ input[type="radio"].visually-hidden {
   .order-form__item--phone {
     margin: 44px 0 18px 0;
     flex-wrap: nowrap;
+    width: auto;
   }
 
   .order-form__item--email {
     flex-wrap: nowrap;
     margin-bottom: 48px;
+    width: auto;
   }
 
   .order-form__input-text--phone,
@@ -456,6 +452,7 @@ input[type="radio"].visually-hidden {
     width: 100%;
     padding-right: 50px;
     margin: 8px 0 0 0;
+    background-color: #f1f1f1;
   }
 
   .order-form__email-icon {
@@ -556,7 +553,7 @@ input[type="radio"].visually-hidden {
     justify-content: flex-start;
     background-color: #f1f1f1;
     margin-top: 12px;
-    padding: 32px 50px 36px 50px;
+    padding: 30px 50px 34px 50px;
   }
 
   .order-form__label--checkbox {
@@ -580,6 +577,7 @@ input[type="radio"].visually-hidden {
 
   .order-form__item--phone {
     padding: 40px 50px 18px 50px;
+    width: 1050px;
   }
 
   .order-form__input-text--phone,
@@ -590,8 +588,13 @@ input[type="radio"].visually-hidden {
     margin-top: 10px;
   }
 
+  .order-form__item--gray {
+    margin: 0 auto;
+  }
+
   .order-form__item--email {
     padding: 2px 50px 48px 50px;
+    width: 1050px;
   }
 
   .order-form__email-icon {

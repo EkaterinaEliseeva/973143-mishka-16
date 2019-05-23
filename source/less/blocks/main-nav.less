@@ -4,6 +4,48 @@
   flex-direction: column;
 }
 
+.main-nav__wrapper {
+  border-bottom: 2px solid @ec;
+}
+
+.main-nav__logo-img {
+  display: block;
+  pointer-events: none;
+}
+
+.main-nav__logo {
+  margin: 22px auto;
+  padding-left: 20px;
+
+  &:hover .main-nav__logo-img {
+    opacity: 0.6;
+  }
+
+  &:active .main-nav__logo-img {
+    opacity: 0.3;
+  }
+}
+
+.main-nav__toggle {
+  height: 14px;
+  width: 20px;
+  font-size: 0;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.main-nav__toggle::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 14px;
+  width: 20px;
+  background-image: url("../img/icon-menu-open.svg");
+}
+
 .main-nav-item {
   flex-basis: 100%;
 }
@@ -49,7 +91,7 @@
   position: relative;
 }
 
-.main-nav__item--search-icon {
+.main-nav__item-icon--search {
   pointer-events: none;
   position: absolute;
   top: 29px;
@@ -59,7 +101,7 @@
   fill: #d3d2d2;
 }
 
-.main-nav__item--cart-icon {
+.main-nav__item-icon--cart {
   pointer-events: none;
   position: absolute;
   top: 29px;
@@ -67,6 +109,15 @@
   width: 21px;
   height: 18px;
   fill: #d3d2d2;
+}
+
+.main-nav__new,
+.main-nav__sale,
+.main-nav__delivery {
+  display: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000000;
 }
 
 @media (max-width: @mobile-width-only) {
@@ -79,7 +130,7 @@
       display: block;
     }
 
-    .page-header__toggle::before {
+    .main-nav__toggle::before {
       width: 21px;
       height: 20px;
       background-image: url("../img/icon-menu-close.svg");
@@ -91,7 +142,7 @@
       display: block;
     }
 
-    .page-header__toggle::before {
+    .main-nav__toggle::before {
       background-image: none;
     }
   }
@@ -99,11 +150,24 @@
 
 @media (min-width: @tablet-width) {
   .main-nav {
-    .tablet-width;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     position: relative;
+  }
+
+  .main-nav__wrapper {
+    border-bottom: none;
+  }
+
+  .main-nav__logo {
+    padding: 22px 0 20px 0;
+    margin: 0;
+  }
+
+  .main-nav__logo-img {
+    width: 113px;
+    height: 46px;
   }
 
   .main-nav__list {
@@ -128,7 +192,7 @@
     right: 316px;
   }
 
-  .main-nav__item--search-icon {
+  .main-nav__item-icon--search {
     top: 35px;
     left: 32px;
   }
@@ -144,18 +208,18 @@
     }
   }
 
-  .main-nav__item--cart-icon {
+  .main-nav__item-icon--cart {
     top: 35px;
     left: 33px;
   }
 
-  .page-header__toggle::before {
+  .main-nav__toggle::before {
     background-image: none;
   }
 
   .main-nav__item--catalog {
     .main-nav__link {
-      padding: 20px 0;
+      padding: 18px 0;
     }
     z-index: 1;
     font-size: 15px;
@@ -167,7 +231,7 @@
 
   .main-nav__item--form {
     .main-nav__link {
-      padding: 20px 0;
+      padding: 18px 0;
     }
     z-index: 1;
     font-size: 15px;
@@ -176,15 +240,42 @@
     top: 88px;
     left: 217px;
   }
+
+  .main-nav__delivery {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 88px;
+    right: 50px;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0;
+    padding: 18px 0;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .main-nav {
-    .desktop-width;
+    width: 1150px;
+    margin: 0 auto;
   }
 
-  .page-header__toggle {
+  .main-nav__toggle {
     display: none;
+  }
+
+  .main-nav__wrapper {
+    margin: 0 auto;
+  }
+
+  .main-nav__logo {
+    padding: 9px 0 8px 0;
+    margin: 0 auto;
+  }
+
+  .main-nav__logo-img {
+    width: 149px;
+    height: 72px;
   }
 
   .main-nav__item--catalog {
@@ -212,6 +303,41 @@
   .main-nav__item--cart {
     .main-nav__link {
       padding: 33px 0 33px 84px;
+    }
+  }
+
+  .main-nav__new {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 88px;
+    left: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+    padding: 20px 0;
+  }
+
+  .main-nav__sale {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 88px;
+    left: 270px;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+    padding: 20px 0;
+  }
+
+  .main-nav__new,
+  .main-nav__sale {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }

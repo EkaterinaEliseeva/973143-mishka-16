@@ -111,6 +111,7 @@
   }
 
   &:active .catalog-item__svg {
+    fill: #63d1bb;
     opacity: 0.3;
   }
 }
@@ -236,6 +237,10 @@
     width: auto;
     margin: 26px 0 32px 0;
   }
+
+  .catalog-item__flex::before {
+    top: -7px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -307,7 +312,7 @@
     max-height: 50px;
     order: 0;
     width: 158px;
-    margin: 56px auto 40px 80px;
+    margin: 54px auto 40px 80px;
     padding: 40px 96px 0 0;
   }
 

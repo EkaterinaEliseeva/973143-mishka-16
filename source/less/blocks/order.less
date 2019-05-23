@@ -3,7 +3,7 @@
   margin: 0 auto;
   font-size: 27px;
   line-height: 30px;
-  padding: 72px 0;
+  padding: 70px 0 74px 0;
   width: 100%;
   text-align: center;
   background-color: #f1f1f1;
@@ -29,11 +29,12 @@
   .order__title::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -4px;
     left: 0;
     height: 24px;
     width: 100%;
     background-image: url("../img/bg-zigzag-fill.svg");
+    background-size: 100% 24px;
     background-repeat: repeat-x;
   }
 
@@ -54,8 +55,9 @@
   }
 
   .order__title::after {
-    bottom: -10px;
+    bottom: -11px;
     height: 34px;
+    background-size: 100%;
   }
 
   .order__description {

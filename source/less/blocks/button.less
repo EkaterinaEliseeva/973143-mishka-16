@@ -13,11 +13,12 @@
 
   &:hover {
     background-color: #444444;
-    color: #ffffff;
+    color: rgba(255, 255, 255, 1);
   }
 
   &:active {
-    color: #7c7c7c;
+    background-color: #444444;
+    color: rgba(255, 255, 255, 0.3);
   }
 }
 
@@ -34,12 +35,13 @@
 }
 
 .button--catalog {
+  width: auto;
   margin: 20px auto 30px auto;
 }
 
 @media (min-width: @tablet-width) {
   .button--special-offer {
-    width: 100%;
+    width: auto;
   }
 
   .button--contacts {
@@ -69,7 +71,7 @@
 
   .button--catalog {
     width: 230px;
-    margin: 42px 0 32px 0;
+    margin: 44px 0 32px 0;
   }
 
   .button--reviews {
