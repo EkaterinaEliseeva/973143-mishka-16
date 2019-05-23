@@ -86,7 +86,6 @@ gulp.task("minjs", function () {
 gulp.task("copy", function() {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/js/**",
     "source/*.ico"
   ], {
     base: "source"
@@ -110,6 +109,7 @@ gulp.task("server", function () {
   gulp.watch("source/less/**/*.less", gulp.series("css"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
+  gulp.watch("source/img/*.{jpg,png}", gulp.series("images", "refresh"));
   gulp.watch("source/js/*.js", gulp.series("js", "minjs", "refresh"));
 });
 
